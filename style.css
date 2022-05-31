@@ -2,15 +2,74 @@
 body{
   background:rgb(255, 255, 255);
 }
+*{
+  transition:all;
+  transition-duration:600ms;
+}
+
 nav {
   box-shadow:1px 1px 10px 0px rgb(226, 226, 226);
   min-height:90px;
+  position:fixed !important;
+  width:100%;
+  z-index:99;
+  background:white;
 }
 #notificationsOnNav{
   border-top:1px solid rgb(210, 210, 210);
   position:absolute;
   padding:0;
   width:100%;
+}
+#notificationsOnNav 
+#hoverElement{
+background:White;
+box-shadow:1px 1px 10px 0px rgb(206, 205, 205); 
+min-height:110px;
+position:absolute;
+width:250px;
+margin-top:5px;
+display:none;
+animation-name:slide;
+animation-duration:1s;
+overflow:hidden;
+}
+@keyframes slide{
+  0%{
+  max-height:0;
+  min-height:0;
+  }
+  100%{
+    max-height:auto;
+      min-height:auto;
+    }
+
+}
+
+#notificationsOnNav #notifyCtn:hover > #hoverElement{
+display:block !important;
+}
+
+#notificationsOnNav 
+#hoverElement::before{
+  content:"";
+  width:20px;
+  height:20px;
+  position:absolute;
+  background:rgb(255, 255, 255);
+  transform:rotate(45deg);
+ margin-top:-12px;
+  z-index:-1;
+box-shadow:1px 1px 10px 0px rgb(206, 205, 205); 
+
+}
+
+#hoverElement h3{
+  color:var(--kadaColor);
+}
+
+#hoverElement #message{
+bordeR:1px solid rgb(213, 212, 212);
 }
 
 #notificationsOnNav #notifyCtn{
@@ -19,6 +78,10 @@ nav {
 
 #notificationsOnNav #notifyCtn button{
   font-size:x-large;
+}
+
+#notificationsOnNav #notifyCtn:hover > button{
+  color:var(--kadaColor);
 }
 #notificationsOnNav #notifyCtn button span{
   position:absolute;
@@ -30,8 +93,16 @@ nav {
   color:white;
   font-size:small;
   font-weight:bolder;
-  transform:translate(15px,-28px)
+  transform:translate(15px,-28px);transition-duration:2s !important;
+  transition:all;
+  overflow:hidden;
 }
+
+#notificationsOnNav #notifyCtn:hover > button span{
+max-width:0;
+max-height:0;
+  }
+
 #userImage{
   width:100px;
   height:100px;
@@ -63,14 +134,14 @@ padding:3px;
   background:white;
   box-shadow:1px 1px 5px 0px rgb(225, 225, 225);
   border-radius:10px;
-  border:1px solid var(--kadaColor);
+  border:1px solid var(--darkKadaColor);
   align-items: center;
   justify-content: start;
 display:flex;
 }
 
 #performerce div #progress{
-background:var(--kadaColor);
+background:var(--darkKadaColor);
 max-width:70%;
 height:100%;
 }
@@ -142,3 +213,5 @@ background:var(--kadaColor);
   padding:10px;
   bordeR:1px solid rgb(232, 232, 232);
 }
+
+

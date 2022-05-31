@@ -13,10 +13,39 @@
   <link rel="stylesheet" href="css/style.css">
   <!--end libraries-->
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/sideMenu.css">
 </head>
 <body>
+ <div class="flexBetween">
+  <div id="sideMenu">
 
-<nav class="w3-nav">
+<div id="menuContent" class="w3-padding"><br>
+  <div class="w3-center">
+  <img src="images/web/group.jpeg" class="w3-circle" width="100" height="100"><br>
+
+  <b>User Name</b>
+  </div>
+  <ul>
+    <li><i class="fa fa-home"></i> <span>Home</span></li>
+    
+    <li><i class="fa fa-bell"></i> <span>Notifications list</span></li>
+    
+    <li><i class="fa fa-gears"></i> <span>privercy policy</span></li>
+    
+    <li><i class="fa fa-gear"></i><span>account settings</span></li>
+    
+    <li><i class="fa fa-switch-off"></i><span>log out</span></li>
+  </ul>
+
+
+</div>
+
+  </div>
+
+
+<div id="mainBody">
+
+<nav class="w3-nav nav">
 
 <div class="flexBetween">
   <div id="content" class="flexBetween" style="max-width:max-content !important;align-items:center;">
@@ -33,12 +62,43 @@
 <div class="flexStart" id="notificationsOnNav">
 <div id="notifyCtn">
   <button class="fa fa-bell"><span class="flexCenter">33</span></button>
+
+  
+  <div id="hoverElement" class="w3-round w3-padding" >
+    <h3>Messages</h3>
+    <hr>
+    <br>
+    <div id="message" class="w3-padding">
+    
+
+      <b>From : KadaHive</b>
+      <br>
+      You account is succesfully created
+      </div>
+  </div>
+
+
 </div>
 
 
 
 <div id="notifyCtn">
   <button class="fa fa-commenting"><span class="flexCenter">23</span></button>
+
+  <div id="hoverElement" class="w3-round w3-padding" style="
+  margin-left:-10px;">
+    <h3>Messages</h3>
+    <hr>
+    <br>
+    <div id="message" class="w3-padding">
+    
+
+      <b>From : KadaHive</b>
+      <br>
+      You account is succesfully created
+      </div>
+  </div>
+
 </div>
 
 
@@ -47,15 +107,17 @@
 
 </nav>
 <br><br>
+<br><br>
+<br><br>
 <div id="profile">
 <div class="w3-center">
-<img id="userImage" class="w3-circle"> 
+<img id="userImage" src="images/web/group.jpeg" class="w3-circle"> 
 </div>
 
 <div style="margin:0 auto;">
 <div class="profileOption bold" id="userName">Austine Samuel</div>
 <div class="profileOption">Level 4 on <span style="color:var(--kadaYellow)" class="bold"> KadaHive</span></div>
-<div class="profileOption" id="performerce"><span class="bold "style="color:var(--kadaColor);padding:2px;"> performerce </span><div id="parentProgress"><div id="progress"></div></div></div>
+<div class="profileOption" id="performerce"><span class="bold "style="color:var(--darkKadaColor);padding:2px;"> performerce </span><div id="parentProgress"><div id="progress"></div></div></div>
 </div>
 
 
@@ -126,6 +188,9 @@ Congratulation to Autine samuel for compling the graphic desiing couse
 
 
 <br><br>
+</div><!--end dashboard-->
+</div><!--end body-->
+</div><!--end html holder-->
 
 </body>
 </html>

@@ -26,4 +26,5 @@ img{
 }
 #inputCtn:hover > label{
   font-weight:bolder;
+  color:var(--kadaColor);
 }
