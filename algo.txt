@@ -1,0 +1,46 @@
+purpose  software
+
+parent track their children performes in kada hub
+
+# show that show the child learning progress
+
+# what have child have learned
+
+# what to learn next
+
+# emailling
+
+# message 
+
+# notifications
+
+
+
+____message structure
+
+message KADAHIVE directly
+
+# simple ajax chat app
+
+
+___notification
+
+notify a particular kada user or notify group of kada user
+by selection feature
+
+
+__what kada official can do?
+# next Event
+# important message
+# rate user performerce
+# post completed courses
+# post child certificate
+
+start learning new thing
+UI
+
+footer
+//invite your friends to KADAHIVE play teck
+
+
+

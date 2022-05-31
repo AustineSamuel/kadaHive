@@ -1,0 +1,31 @@
+users{
+name: string
+email : string 
+password : hashed string 
+learningProgress :  string
+performerce : string
+level : int,
+image : string 
+notification : string (tableName)
+messages  : string (tableName),
+weeklyAddendance : string (tableName)
+bio : string (tableName)
+}
+
+admin{
+  name : string
+password : hashed string 
+email : password
+
+}
+
+adminPosts{//also send email to the user
+  to:userId,
+  title:"heading",
+  message:"<html>"
+  type:/message/notification/importantMessage
+image:"url"
+postBy :default 'kadaHive',
+additionalStyle : "css",
+
+}

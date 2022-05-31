@@ -1,0 +1,20 @@
+/*general settings for the whole web appalication*/
+:root{
+  --darkKadaColor:rgb(42,128,30);
+  --kadaColor:rgb(134,169,49);
+  --kadaLight:rgb(180,206,29);
+  --kadaLight2:rgb(199,218,128);
+  --kadaLightYellow:rgb(199,218,128);
+  --kadaYellow:rgb(255,136,14);
+  --kadaYellow1:rgb(250,178,9);
+  --kadaYellow2:rgb(255,217,0);
+}
+
+a{
+  color:var(--kadaColor);
+  text-decoration: underline;
+}
+
+*[class*="bold"]{
+  font-weight:bolder;
+}
