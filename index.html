@@ -16,6 +16,13 @@
   <link rel="stylesheet" href="css/sideMenu.css">
 </head>
 <body>
+
+<div id="mobileMenu"  class="flexStart"><!--menu container pc -->
+<div id="content"></div>
+<div id="space"  onclick="$('#mobileMenu #content').animate({marginLeft:'-200%'},1000);setTimeout(()=>{$('#mobileMenu').hide(0)},100);$('#mobileMenu #space').animate({backround:'rgba(0,0,0,0.1)'},1000);" ></div>
+</div><!--menu container mobile-->
+
+
  <div class="flexBetween">
   <div id="sideMenu">
 
@@ -54,7 +61,7 @@
     <span class="w3-text">user name</span>
     </div>
 
-<button class="fa fa-reorder w3-xlarge w3-padding">
+<button onclick="$('#mobileMenu').show(0);$('#mobileMenu #content').css('margin-left','0');" class="fa fa-reorder w3-xlarge w3-padding">
 </button>
 </div>
 
@@ -192,5 +199,9 @@ Congratulation to Autine samuel for compling the graphic desiing couse
 </div><!--end body-->
 </div><!--end html holder-->
 
+
+
+
+<script src="scripts/index.js"></script>
 </body>
 </html>

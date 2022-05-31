@@ -12,7 +12,6 @@
   --mygrey:rgb(220, 219, 219);
   --mygrey1:rgb(236, 232, 244);
 }
-
 a{
   color:var(--kadaColor);
   text-decoration: underline;
