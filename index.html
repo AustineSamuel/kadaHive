@@ -14,8 +14,9 @@
   <!--end libraries-->
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="css/sideMenu.css">
+  <script src="lib/angular-1.8.2/angular.min.js"></script>
 </head>
-<body>
+<body ng-app="app" ng-controller="appCtr">
 
 <div id="mobileMenu"  class="flexStart"><!--menu container pc -->
 <div id="content"></div>
@@ -118,11 +119,11 @@
 <br><br>
 <div id="profile">
 <div class="w3-center">
-<img id="userImage" src="images/web/group.jpeg" class="w3-circle"> 
+<img id="userImage" width="130" height="130" src="images/me111.jpg" class="w3-circle"> 
 </div>
 
 <div style="margin:0 auto;">
-<div class="profileOption bold" id="userName">Austine Samuel</div>
+<div class="profileOption bold" id="userName">User Name</div>
 <div class="profileOption">Level 4 on <span style="color:var(--kadaYellow)" class="bold"> KadaHive</span></div>
 <div class="profileOption" id="performerce"><span class="bold "style="color:var(--darkKadaColor);padding:2px;"> performerce </span><div id="parentProgress"><div id="progress"></div></div></div>
 </div>
@@ -140,12 +141,12 @@
 <div id="dashboardContainer" class="w3-container w3-padding">
 <b id="heading">Certificate</b>
 <hr>
-<div class="scrollX" id="ctxcontainer">
+<div class="scrollX" id="ctxcontainer" style="display:flex;align-items:center;min-width:100%;">
 
-<div><!--repeat this element-->
-<img src="images/web/group.jpeg">
+<div ng-repeat="certificate in certificates"><!--repeat this element-->
+<img src="images/{{certificate.image}}">
 <br>
-<div class="w3-center bold w3-padding">Graphic designer</div>
+<div class="w3-center bold w3-padding">{{certificate.name}}</div>
 
 </div>
 
@@ -162,9 +163,9 @@
   <hr>
   <div id="attnCtn" class="flexRound">
 
-<div id="day" class="flexRound">
+<div id="day" class="flexRound" ng-repeat="i in [1,2,3,4,5,6,7] track by $index">
   <div class="w3-padding">
-<button class="fa fa-check-circle-o"></button>
+<button class="{{$index!=5 ? 'fa fa-check-circle w3-light-green':'fa fa-times w3-text-red w3-light-grey'}}"></button>
 </div>
 <div id="progressCtn"> <div id="progressCtn"></div></div>
 <div class="w3-padding">
@@ -203,5 +204,32 @@ Congratulation to Autine samuel for compling the graphic desiing couse
 
 
 <script src="scripts/index.js"></script>
+
+<script>
+  const app=angular.module("app",[]);
+  app.controller("appCtr",function($scope){
+console.log($scope)
+
+$scope.certificates=[
+  {
+name:"React Redux ",
+image:"react_certificate.jpg"
+    },
+    {
+name:"Phython 3",
+image:"Python_certificate.jpg"
+    },
+      {
+name:"PHP ",
+image:"PHP_certificate.jpg"
+    },
+    {
+name:"SQL ",
+image:"SQL_certificate.jpg"
+    }
+
+]
+  })
+</script>
 </body>
 </html>

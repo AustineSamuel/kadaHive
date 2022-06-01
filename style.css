@@ -170,13 +170,15 @@ height:100%;
 }
 
 #ctxcontainer{
-  width:200px;
+  min-width:100%;
   border:1px solid rgb(244, 244, 244);
   padding:10px;
+  overflow:auto;
 }
 
 #ctxcontainer img{
 width:100%;
+min-width:180px;
 height:100px;
 }
 
@@ -206,6 +208,12 @@ height:100px;
 
 #attnCtn #day #progress{
 background:var(--kadaColor);
+}
+
+#attnCtn{
+  width:100%;
+justify-content:space-around;;
+display:flex;
 }
 
 #mesageBody{

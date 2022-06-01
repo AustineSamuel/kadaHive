@@ -1,2 +1,3 @@
 //general functons for the whole web application
-$("#mobileMenu #content").html($("#menuContent").html()).hide(0);
+$("#mobileMenu #content").html($("#menuContent").html()).parent("#mobileMenu").hide(0);
+clickImageViewer() 
