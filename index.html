@@ -27,9 +27,9 @@
  <div class="flexBetween">
   <div id="sideMenu">
 
-<div id="menuContent" class="w3-padding"><br>
+<div id="menuContent" class="w3-padding w3-container"><br>
   <div class="w3-center">
-  <img src="images/web/group.jpeg" class="w3-circle" width="100" height="100"><br>
+  <img src="images/web/icon.jpeg" class="w3-circle" width="100" height="100"><br>
 
   <b>User Name</b>
   </div>
@@ -42,7 +42,7 @@
     
     <li><i class="fa fa-gear"></i><span>account settings</span></li>
     
-    <li><i class="fa fa-switch-off"></i><span>log out</span></li>
+    <li onclick="href('login/index.html')"><i class="fa fa-switch-off"></i><span>log out</span></li>
   </ul>
 
 
@@ -119,7 +119,7 @@
 <br><br>
 <div id="profile">
 <div class="w3-center">
-<img id="userImage" width="130" height="130" src="images/me111.jpg" class="w3-circle"> 
+<img id="userImage" width="130" height="130" src="images/icon.jpg" class="w3-circle"> 
 </div>
 
 <div style="margin:0 auto;">
@@ -163,13 +163,13 @@
   <hr>
   <div id="attnCtn" class="flexRound">
 
-<div id="day" class="flexRound" ng-repeat="i in [1,2,3,4,5,6,7] track by $index">
+<div id="day" class="flexRound" ng-repeat="i in ['S','M','T','W','TH','F','S'] track by $index">
   <div class="w3-padding">
 <button class="{{$index!=5 ? 'fa fa-check-circle w3-light-green':'fa fa-times w3-text-red w3-light-grey'}}"></button>
 </div>
 <div id="progressCtn"> <div id="progressCtn"></div></div>
 <div class="w3-padding">
-<button class="flexCenter">S</button>
+<button class="flexCenter">{{i}}</button>
 </div>
 
 </div>
@@ -189,8 +189,8 @@
   <span class="w3-xsmall w3-text-grey">Posted by KadaHive to userName</span>
   <hr>
   <article id="mesageBody">
-<h1>Congratulation to austine samuel</h1>
-Congratulation to Autine samuel for compling the graphic desiing couse
+<h1>Congratulations to Austine Samuel</h1>
+Congratulations to Autine samuel for completing the graphic design course in KadaHive tech hub
   </article>
   </div>
 
@@ -206,6 +206,7 @@ Congratulation to Autine samuel for compling the graphic desiing couse
 <script src="scripts/index.js"></script>
 
 <script>
+  useSweetAlert2();
   const app=angular.module("app",[]);
   app.controller("appCtr",function($scope){
 console.log($scope)
@@ -230,6 +231,15 @@ image:"SQL_certificate.jpg"
 
 ]
   })
+
+onload=()=>{
+setTimeout(()=>{
+  swal.fire({title:"KadaHive suggestion for playTech",icon:"info",text:"this is suggestion for KadaHive  playtech learning system "});
+  clickImageViewer(); 
+},1000)
+}
+
+
 </script>
 </body>
 </html>
